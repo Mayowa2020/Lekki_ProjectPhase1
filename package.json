@@ -1,18 +1,20 @@
 {
     "name": "lekkiprojectphase1",
     "version": "1.0.0",
-    "description": "",
+    "description": "API specification for property services",
     "main": "index.js",
     "scripts": {
         "start": "nodemon index.js"
     },
     "keywords": [],
-    "author": "",
+    "author": "Bukky Oyetimehin",
     "license": "ISC",
     "dependencies": {
         "cors": "^2.8.5",
         "express": "^4.17.2",
-        "mongoose": "^6.1.6"
+        "moment": "^2.29.1",
+        "mongoose": "^6.1.6",
+        "mongoose-aggregate-paginate-v2": "^1.0.6"
     },
     "devDependencies": {
         "dotenv": "^11.0.0",

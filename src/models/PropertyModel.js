@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+// const aggregatePaginate = require("mongoose-aggregate-paginate-v2");
 
 const propertySchema = new mongoose.Schema({
     property: {
@@ -48,5 +49,6 @@ const propertySchema = new mongoose.Schema({
         imageURL: { type: String },
     },
 });
+// propertySchema.plugin(aggregatePaginate);
 
 module.exports = mongoose.model("Property", propertySchema);
