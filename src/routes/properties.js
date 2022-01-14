@@ -14,7 +14,20 @@ router.get("/", async (req, res) => {
 
 // Addina One Property
 router.post("/", async (req, res) => {
-    const property = new Property(req.body);
+      const property = new Property({
+        address: req.body.address,
+        type: req.body.type,
+        bedroom: req.body.bedroom,
+        sittingroom: req.body.sittingroom,
+        kitchen: req.body.kitchen,
+        bathroom: req.body.bathroom,
+        toilet: req.body.toilet,
+        owner: req.body.owner,
+        description: req.body.description,
+        validFromDate: req.body.validFromDate,
+        validToDate: req.body.validToDate,
+        imageURL: req.body.imageURL,
+    });
 
     try {
         const savedProperty = await property.save();
@@ -22,6 +35,7 @@ router.post("/", async (req, res) => {
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
+    console.log(savedProperty)
 });
 
 //Getting a Specific Prperty
@@ -31,7 +45,7 @@ router.get("/:propertyId", async (req, res) => {
         res.json(property);
         if (property == null) {
             return res.status(404).json({ message: "Property not found" });
-        };
+        }
     } catch (err) {
         return res.status(500).json({ message: err.message });
     }
@@ -54,10 +68,14 @@ router.patch("/:propertyId", async (req, res) => {
                 },
             }
         );
-        res.json({updatedProperty})
+        res.json({ updatedProperty });
     } catch (err) {
         res.json({ message: err });
     }
 });
+
+// show list of properties on a single page base on defined criteria
+// Filter properties by either no of bedrooms, no of bathroom, owner etc
+//Find property by address
 
 module.exports = router;
