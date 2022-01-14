@@ -1,0 +1,26 @@
+{
+    "property": {
+        "address": " 1, Johnson Street, Lagos",
+        "type": "Duplex",
+        "bedroom": 5,
+        "sittingroom": 2,
+        "kitchen": 1,
+        "bathroom": 5,
+        "toilet": 6,
+        "owner": "James Smith",
+        "description": [
+            "Beautiful Garden",
+            "Massive Compound with parking space for up to 6 cars",
+            "Dedicated laundry room",
+            "Maids Room/Boy's Quarters(BQ)",
+            "The serene estate has good drainage",
+            "good road network",
+            "good electricity",
+            "good security",
+            "sport and recreational facilities."
+        ],
+        "validFrom": "",
+        "validTo": "",
+        "imageUrl": ""
+    }
+}
