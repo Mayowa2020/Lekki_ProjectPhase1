@@ -4,7 +4,7 @@
     "description": "API specification for property services",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon index.js"
+        "start": "node index.js"
     },
     "keywords": [],
     "author": "Bukky Oyetimehin",
