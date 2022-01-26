@@ -15,7 +15,7 @@ app.use("/properties", propertiesRouter);
 
 // Error handling
 app.use(async (req, res, next) => {
-    next(createError.NotFound("This routr does not exist"));
+    next(createError.NotFound("This router does not exist"));
 });
 
 // Error handler
@@ -30,12 +30,12 @@ app.use((err, req, res, next) => {
     });
 });
 
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 const bootstrap = async () => {
     try {
         await connectDB; // connect to Database
-        app.listen(process.env.PORT, "0.0.0.0");
+        app.listen(port, () => console.log(`Server running on ${port}!`));
     } catch (error) {
         console.log(error);
     }
