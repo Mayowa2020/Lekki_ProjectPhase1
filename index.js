@@ -30,12 +30,12 @@ app.use((err, req, res, next) => {
     });
 });
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 const bootstrap = async () => {
     try {
         await connectDB; // connect to Database
-        app.listen(port, () => console.log(`Server running on ${port}!`));
+        app.listen(PORT, () => console.log(`App listening on ${PORT}`));
     } catch (error) {
         console.log(error);
     }
