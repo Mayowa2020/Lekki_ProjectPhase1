@@ -35,7 +35,7 @@ const PORT = process.env.PORT || 5000;
 const bootstrap = async () => {
     try {
         await connectDB; // connect to Database
-        app.listen(PORT);
+        app.listen(process.env.PORT, "0.0.0.0");
     } catch (error) {
         console.log(error);
     }
