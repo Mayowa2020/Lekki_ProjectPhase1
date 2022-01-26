@@ -3,9 +3,10 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const createError = require("http-errors");
 
+const connectDB = require("./src/config/connect");
 // Import Routes
 const propertiesRouter = require("./src/routes/properties");
-const connectDB = require("./src/config/connect");
+
 const app = express();
 
 app.use(bodyParser.json());

@@ -2,6 +2,7 @@ const { all } = require("express/lib/application");
 const Property = require("../models/PropertyModel");
 const errorFunction = require("../utils/errorFunction");
 
+
 module.exports = {
     getAllProperties: async (req, res) => {
         try {
